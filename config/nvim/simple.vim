@@ -1,9 +1,5 @@
-call plug#begin('~/.local/share/nvim/plugged')
-Plug 'sainnhe/gruvbox-material'
-
-call plug#end()
-
-colorscheme gruvbox-material
+" leaderをスペースへ設定
+let mapleader = "\<Space>"
 
 " terminal のインサートモードを抜ける
 :tnoremap <C-n> <C-\><C-n>
@@ -53,8 +49,6 @@ function! s:split_type() abort
     endif
 endfunction
 
-" leaderをスペースへ設定
-let mapleader = "\<Space>"
 
 " jj でesc
 inoremap jj <Esc>
@@ -68,3 +62,23 @@ nnoremap <Leader>q :q<CR>
 
 " 終了時に確認する
 set confirm
+
+
+" Plugin関係
+call plug#begin('~/.local/share/nvim/plugged')
+Plug 'sainnhe/gruvbox-material'
+Plug 'easymotion/vim-easymotion'
+call plug#end()
+
+
+colorscheme gruvbox-material
+
+
+" Move to word
+map  s <Plug>(easymotion-bd-w)
+nmap s <Plug>(easymotion-overwin-w)
+" map  <Leader>w <Plug>(easymotion-bd-w)
+" nmap <Leader>w <Plug>(easymotion-overwin-w)
+
+hi EasyMotionTarget guifg=#80a0ff ctermfg=81
+
