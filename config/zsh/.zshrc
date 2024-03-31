@@ -54,9 +54,6 @@ zstyle ':completion:*' list-colors ''
 ## シンタックスハイライト
 zinit light zsh-users/zsh-syntax-highlighting
 
-## 履歴補完
-zinit light zsh-users/zsh-autosuggestions
-
 ## コマンド履歴検索
 function peco-history-selection() {
   BUFFER=`history -n 1 | tac  | awk '!a[$0]++' | peco`
@@ -165,6 +162,9 @@ alias can='cargo atcoder new'
 alias cat='cargo atcoder test'
 alias cas='cargo atcoder submit'
 
+# # zellij
+# alias z='zellij'
+
 # swapファイル
 alias cswap='cd ~/.local/state/nvim/swap'
 
@@ -257,3 +257,9 @@ export FZF_DEFAULT_OPTS='
         --color info:183,prompt:110,spinner:107,pointer:014,marker:215
         '
 
+# zinit wait lucid light-mode as'null' \
+#     atinit'source "$ZDOTDIR/.zshrc.lazy"' \
+#     for 'zdharma-continuum/null'
+#
+# sheldon
+eval "$(sheldon source)"
