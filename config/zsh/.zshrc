@@ -37,10 +37,6 @@ zinit light-mode for \
 # color
 # export TERM=xterm-color256
 
-## コマンド補完
-zinit ice wait'0'; zinit light zsh-users/zsh-completions
-autoload -Uz compinit && compinit
-
 ## 補完で小文字でも大文字にマッチさせる
 zstyle ':completion:*' matcher-list 'm:{a-z}={A-Z}'
 
@@ -50,9 +46,6 @@ zstyle ':completion:*:default' menu select=1
 ## 補完一覧をカラー表示
 autoload colors
 zstyle ':completion:*' list-colors ''
-
-## シンタックスハイライト
-zinit light zsh-users/zsh-syntax-highlighting
 
 ## コマンド履歴検索
 function peco-history-selection() {
@@ -257,9 +250,9 @@ export FZF_DEFAULT_OPTS='
         --color info:183,prompt:110,spinner:107,pointer:014,marker:215
         '
 
-# zinit wait lucid light-mode as'null' \
-#     atinit'source "$ZDOTDIR/.zshrc.lazy"' \
-#     for 'zdharma-continuum/null'
-#
+zinit wait lucid light-mode as'null' \
+    atinit'source "$ZDOTDIR/.zshrc.lazy"' \
+    for 'zdharma-continuum/null'
+
 # sheldon
 eval "$(sheldon source)"
