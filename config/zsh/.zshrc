@@ -1,11 +1,3 @@
-# Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
-# Initialization code that may require console input (password prompts, [y/n]
-# confirmations, etc.) must go above this block; everything else may go below.
-if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
-  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
-fi
-
-
 ### Added by Zinit's installer
 if [[ ! -f $HOME/.local/share/zinit/zinit.git/zinit.zsh ]]; then
     print -P "%F{33} %F{220}Installing %F{33}ZDHARMA-CONTINUUM%F{220} Initiative Plugin Manager (%F{33}zdharma-continuum/zinit%F{220})…%f"
@@ -28,15 +20,6 @@ zinit light-mode for \
     zdharma-continuum/zinit-annex-rust
 ### End of Zinit's installer chunk
 
-
-# source /opt/homebrew/opt/powerlevel10k/powerlevel10k.zsh-theme
-
-# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
-[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
-
-# color
-# export TERM=xterm-color256
-
 ## 補完で小文字でも大文字にマッチさせる
 zstyle ':completion:*' matcher-list 'm:{a-z}={A-Z}'
 
@@ -55,13 +38,6 @@ function peco-history-selection() {
 }
 zle -N peco-history-selection
 bindkey '^R' peco-history-selection
-
-## itermのタブ名を変更する
-alias tn='tab-name'
-
-tab-name(){
-	echo -ne "\e]1;$1\a"
-}
 
 ## github cli コマンド補完
 eval "$(gh completion -s zsh)"
@@ -98,71 +74,10 @@ fi
 export PATH="$HOME/.anyenv/bin:$PATH"
 eval "$(anyenv init -)"
 
-# Alias
-## tigのエイリアス
-alias t="tig"
-
-## git
-alias g="git"
-
-## gitフォルダへの移動
-alias cg="cd ~/git"
-
-## docker周りのエイリアス
-alias dcb='docker compose build'
-alias dcu='docker compose up -d'
-alias dcr='docker compose run'
-alias dcrr='docker compose run --rm'
-alias dcre='docker compose restart'
-alias dx='docker compose exec'
-alias dcd='docker compose down'
-alias dp='docker ps'
-alias dcl='docker compose logs'
-alias dcc='docker compose config --services'
-
-## localhost立ち上げのため
-alias lhost='(){open http://localhost:$1}'
 
 ## google cloud sdkの導入
 source "/opt/homebrew/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.zsh.inc"
 source "/opt/homebrew/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.zsh.inc"
-
-
-## BigQuery用
-### csv,jsonの一括作成
-alias tdf='(){touch $1.csv $1.json}'
-
-### tableの作成
-alias bql='(){bq load --source_format=CSV $1.$2 $3.csv $3.json}'
-
-## Terraform
-alias tf='terraform'
-
-## Exercism
-alias ex='exercism'
-alias es='exercism submit'
-
-## neovimのterminalを一括で開く
-alias nt='nvim -c :term'
-
-# Ocaml用
-## 対話モードでカーソルキーが使えるように
-alias ocaml='rlwrap ocaml'
-
-# cargo-atcoder
-alias ca='cargo atcoder'
-alias can='cargo atcoder new'
-alias cat='cargo atcoder test'
-alias cas='cargo atcoder submit'
-
-# # zellij
-# alias z='zellij'
-
-# swapファイル
-alias cswap='cd ~/.local/state/nvim/swap'
-
-# code -r .
-alias cr='code -r'
 
 # Rustの設定
 source $HOME/.cargo/env
@@ -249,10 +164,6 @@ export FZF_DEFAULT_OPTS='
         --color fg:188,bg:233,hl:103,fg+:222,bg+:014,hl+:104,gutter:233
         --color info:183,prompt:110,spinner:107,pointer:014,marker:215
         '
-
-zinit wait lucid light-mode as'null' \
-    atinit'source "$ZDOTDIR/.zshrc.lazy"' \
-    for 'zdharma-continuum/null'
 
 # sheldon
 eval "$(sheldon source)"
