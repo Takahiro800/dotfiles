@@ -1,0 +1,10 @@
+config/gh/hosts.yml
+config/karabiner/automatic_backups
+config/nvim.bak
+config/tmux/plugins
+**/**.log
+config/wezterm/images
+config/nvim/README.md
+config/nvim/LICENSE
+config/zsh/.zsh_history
+config/zsh/.zcompdump
