@@ -1,0 +1,75 @@
+{
+  "input!": {
+    "prefix": "input",
+    "body": [
+      "input!{$1};"
+    ]
+  },
+  "println!": {
+    "prefix": "pp!",
+    "body": [
+      "println!(\"{}\", $1);"
+    ]
+  },
+  "ans!": {
+    "prefix": "ans",
+    "body": [
+      "println!(\"{}\", ans);"
+    ]
+  },
+  "println!-char{\"\", }": {
+    "prefix": "char",
+    "body": [
+      "println!(\"$1\");"
+    ]
+  },
+  "println:?{\"\", }": {
+    "prefix": "pp?",
+    "body": [
+      "  println!(\"{:?}\", $1);"
+    ]
+  },
+  "yes_or_no": {
+    "prefix": "yes_or_no",
+    "body": [
+      "println!(\"{}\", if ans {\"Yes\"} else {\"No\"});"
+    ]
+  },
+  "->": {
+    "prefix": "arrow right",
+    "body": [
+      "->"
+    ]
+  },
+  "non_snake_case": {
+    "prefix": "non_snake_case",
+    "body": [
+      "#[allow(non_snake_case)]"
+    ]
+  },
+  "todo": {
+    "prefix": "todo",
+    "body": [
+      "// TODO: $1"
+    ]
+  },
+  "note": {
+    "prefix": "note",
+    "body": [
+      "// NOTE: $1"
+    ]
+  },
+  "<>": {
+    "prefix": "kk",
+    "body": [
+      "<$1>"
+    ]
+  },
+  "&": {
+    "prefix": "and",
+    "body": [
+      "&"
+    ],
+    "description": "Another snippet-description."
+  }
+}

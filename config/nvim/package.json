@@ -1,0 +1,19 @@
+{
+  "name": "snippets",
+  "contributes": {
+    "snippets": [
+      {
+        "language": [
+          "rust"
+        ],
+        "path": "snippets/rust.json"
+      },
+      {
+        "language": [
+          "markdown"
+        ],
+        "path": "snippets/md.json"
+      }
+    ]
+  }
+}
