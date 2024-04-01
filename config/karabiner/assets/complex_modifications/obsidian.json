@@ -1,0 +1,102 @@
+{
+  "title": "Obsidian用の設定",
+  "rules": [
+    {
+      "description": "Obsidianで記号を入力しやすく",
+      "manipulators": [
+        {
+          "type": "basic",
+          "from": {
+			  "key_code": "n",
+			  "modifiers": {
+				  "mandatory": ["control"],
+				  "optional": ["caps_lock", "option"]
+			  }
+		  },
+		  "to": [
+			  { "key_code": "hyphen",
+				"modifiers": ["shift"]
+			  }
+          ],
+		  "conditions": [
+            {
+              "type": "frontmost_application_if",
+			  "file_paths": [
+				"/Applications/Obsidian.app/Contents/MacOS/Obsidian"
+			  ]
+            }
+          ],
+          "description": "ctrl + n to _"
+        },
+		{
+          "type": "basic",
+          "from": {
+			  "key_code": "m",
+			  "modifiers": {
+				  "mandatory": ["control"],
+				  "optional": ["caps_lock", "option"]
+			  }
+		  },
+		  "to": [
+			  {
+				  "key_code": "keypad_equal_sign"
+			  }
+          ],
+		  "conditions": [
+            {
+              "type": "frontmost_application_if",
+			  "file_paths": [
+				"/Applications/Obsidian.app/Contents/MacOS/Obsidian"
+			  ]
+            }
+          ],
+          "description": "ctrl + n to _"
+        },
+		{
+          "type": "basic",
+          "from": {
+			  "key_code": "i",
+			  "modifiers": {
+				  "mandatory": ["control"],
+				  "optional": ["caps_lock", "option"]
+			  }
+		  },
+		  "to": [
+			  { "key_code": "keypad_hyphen"}
+          ],
+		  "conditions": [
+            {
+              "type": "frontmost_application_if",
+			  "file_paths": [
+				"/Applications/Obsidian.app/Contents/MacOS/Obsidian"
+			  ]
+            }
+          ],
+          "description": "ctrl + n to _"
+		},
+				{
+          "type": "basic",
+          "from": {
+			  "key_code": "o",
+			  "modifiers": {
+				  "mandatory": ["control"],
+				  "optional": ["caps_lock", "option"]
+			  }
+		  },
+		  "to": [
+			  { "key_code": "keypad_plus"}
+          ],
+		  "conditions": [
+            {
+              "type": "frontmost_application_if",
+			  "file_paths": [
+				"/Applications/Obsidian.app/Contents/MacOS/Obsidian"
+			  ]
+            }
+          ],
+          "description": "ctrl + n to _"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "title": "独自ルール",
+  "rules": [
+    {
+      "description": "Caps lock change to control",
+      "manipulators": [
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "caps_lock",
+ 	    "modifiers": {
+              "optional": [
+                "any"
+              ]
+            }
+          },
+          "to_if_alone": [
+            {
+              "key_code": "control"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
