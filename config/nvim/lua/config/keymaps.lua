@@ -38,19 +38,6 @@ keymap.set("n", "noh", ":noh<CR>", opts)
 keymap.set("n", "f", ":HopWord<cr>", opts)
 keymap.set("n", "s", ":HopWord<cr>", opts)
 
--- terminal
-local Util = require("lazyvim.util")
-local lazyterm = function()
-  Util.terminal(nil, { border = "rounded" })
-end
-
-keymap.set("n", "<leader>ft", lazyterm, { desc = "Terminal (cwd)" })
-keymap.set("n", "<leader>fT", function()
-  Util.terminal(nil, { cwd = Util.root() })
-end, { desc = "Terminal (root dir)" })
-keymap.set("n", "<c-/>", lazyterm, { desc = "Terminal (cwd)" })
-keymap.set("n", "<c-_>", lazyterm, { desc = "which_key_ignore" })
-
 -- nvim-cmp
 return {
   "hrsh7th/nvim-cmp",
