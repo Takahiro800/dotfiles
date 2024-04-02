@@ -1,3 +1,4 @@
+echo "hogehoge"
 ### Added by Zinit's installer
 if [[ ! -f $HOME/.local/share/zinit/zinit.git/zinit.zsh ]]; then
     print -P "%F{33} %F{220}Installing %F{33}ZDHARMA-CONTINUUM%F{220} Initiative Plugin Manager (%F{33}zdharma-continuum/zinit%F{220})…%f"
@@ -39,12 +40,6 @@ function peco-history-selection() {
 zle -N peco-history-selection
 bindkey '^R' peco-history-selection
 
-## github cli コマンド補完
-eval "$(gh completion -s zsh)"
-
-## goのパスを設定
-export GOPATH=$HOME
-export PATH=$PATH:$GOPATH/bin
 
 ## ctrl + [ でGitディレクトリを検索・移動
 function peco-src () {
@@ -71,10 +66,6 @@ if [ -d $ZSHHOME -a -r $ZSHHOME -a \
     done
 fi
 
-export PATH="$HOME/.anyenv/bin:$PATH"
-eval "$(anyenv init -)"
-
-
 ## google cloud sdkの導入
 source "/opt/homebrew/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.zsh.inc"
 source "/opt/homebrew/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.zsh.inc"
@@ -83,15 +74,6 @@ source "/opt/homebrew/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completi
 source $HOME/.cargo/env
 
 
-# rbenvのpath
-[[ -d ~/.rbenv  ]] && \
-  export PATH=${HOME}/.rbenv/bin:${PATH} && \
-  eval "$(rbenv init -)"
-# yarn global addのpath
-export PATH="$PATH:`yarn global bin`"
-
-# aws cliv2のpath
-export PATH=/usr/local/bin:$PATH
 
 function abc() {
     local contest_id="$1"
@@ -145,25 +127,8 @@ function nippo() {
     gh issue view -R Takahiro800/nippo $issue_number --web
 }
 
-# Starship
-eval "$(starship init zsh)"
-
-# Set up fzf key bindings and fuzzy completion
-eval "$(fzf --zsh)"
-eval "$(zoxide init zsh)"
-alias zi='zi'
-
-eval "$(fzf --zsh)"
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
-export FZF_DEFAULT_COMMAND='rg --files --hidden --glob "!.git"'
-export FZF_CTRL_R_OPTS="--reverse"
-export FZF_TMUX_OPTS="-p"
-
-export FZF_DEFAULT_OPTS='
-        --height 40% --layout=reverse --border
-        --color fg:188,bg:233,hl:103,fg+:222,bg+:014,hl+:104,gutter:233
-        --color info:183,prompt:110,spinner:107,pointer:014,marker:215
-        '
-
 # sheldon
 eval "$(sheldon source)"
+
+# Starship
+eval "$(starship init zsh)"
