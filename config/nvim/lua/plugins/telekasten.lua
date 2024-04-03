@@ -3,7 +3,7 @@ return {
     "renerocksai/telekasten.nvim",
     dependencies = { "nvim-telescope/telescope.nvim" },
     opts = {
-      home = vim.fn.expand("~/git/Obsidian-Vault"),
+      home = vim.fn.expand("~/git/notes/"),
       auto_set_filetype = false,
     },
     keys = {
