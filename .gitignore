@@ -9,3 +9,6 @@ config/nvim/LICENSE
 config/zsh/.zsh_history
 config/zsh/.zcompdump
 config/zsh/.zprofile
+config/zsh/ignore.zsh
+config/sesh/**
+trash/**

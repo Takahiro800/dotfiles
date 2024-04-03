@@ -19,6 +19,10 @@ github = "zsh-users/zsh-completions"
 [plugins.fast-syntax-highlighting]
 github = "zdharma-continuum/fast-syntax-highlighting"
 
+# [plugins.zsh-vi-mode]
+# github = "jeffreytse/zsh-vi-mode"
+# apply = ["source"]
+
 [plugins.dotfiles-defers]
 local = "~/git/dotfiles/config/zsh"
 use = ["{!sync,*}.zsh"]
