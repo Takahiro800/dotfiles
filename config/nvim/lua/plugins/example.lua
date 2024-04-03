@@ -147,7 +147,7 @@ return {
         "lua",
         "markdown",
         "markdown_inline",
-        "python",
+        -- "python",
         "query",
         "regex",
         "tsx",
@@ -225,11 +225,6 @@ return {
     dependencies = {
       "hrsh7th/cmp-emoji",
     },
-    keys = {
-      -- disable the keymap
-      { "<C-n>", false },
-    },
-
     ---@param opts cmp.ConfigSchema
     opts = function(_, opts)
       local has_words_before = function()
