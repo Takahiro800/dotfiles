@@ -1,0 +1,97 @@
+{
+  "snip1": {
+    "prefix": "lua",
+    "body": [
+      "lualualua"
+    ]
+  },
+  "log": {
+    "prefix": "log",
+    "body": [
+      "Rails.logger.info(\"loglog:******* $1 #{ $1 }\") # TODO"
+    ],
+    "description": "デバッグ用"
+  },
+  "logg": {
+    "prefix": "logg",
+    "body": [
+      "Rails.logger.info(\"loglog:******* $1 \") # TODO"
+    ],
+    "description": "デバッグ用"
+  },
+  "frozen_literal": {
+    "prefix": "frozen_literal",
+    "body": [
+      "# frozen_string_literal: true"
+    ],
+    "description": "デバッグ用"
+  },
+  "TODO": {
+    "prefix": "todo",
+    "body": [
+      "# TODO: "
+    ],
+    "description": "TODO"
+  },
+  "CHECK": {
+    "prefix": "check",
+    "body": [
+      "# CHECK: "
+    ],
+    "description": "CHECK"
+  },
+  "NOTE": {
+    "prefix": "note",
+    "body": [
+      "# NOTE: "
+    ],
+    "description": "NOTE"
+  },
+  "FIX": {
+    "prefix": "fix",
+    "body": [
+      "# FIX: "
+    ],
+    "description": "FIX"
+  },
+  "ABSTRACT_METHODS": {
+    "prefix": "abstract methods",
+    "body": [
+      "ABSTRACT_METHODS = [",
+      "]",
+      "",
+      "ABSTRACT_METHODS.each do |m|",
+      "define_method(m) { raise NotImplementedError.new(\"#{self.class}##{__method__} が実装されていません\") }",
+      "end"
+    ],
+    "description": "FIX"
+  },
+  "FACTORY_GIRL": {
+    "prefix": "factory girl",
+    "body": [
+      "FactoryGirl"
+    ],
+    "description": "FactoryGirl"
+  },
+  "rpse: describe": {
+    "prefix": "describe",
+    "body": [
+      "describe"
+    ],
+    "description": "describe"
+  },
+  "rspec: be_truthy": {
+    "prefix": "be_truthy",
+    "body": [
+      "be_truthy"
+    ],
+    "description": "be_truthy"
+  },
+  "rspec: be_falsy": {
+    "prefix": "be_falsy",
+    "body": [
+      "be_falsy"
+    ],
+    "description": "be_falsy"
+  }
+}

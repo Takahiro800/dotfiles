@@ -2,30 +2,16 @@ return {
   {
     "telescope.nvim",
     dependencies = {
+      "nvim-telescope/telescope-live-grep-args.nvim",
+      "nvim-telescope/telescope-file-browser.nvim",
       {
         "nvim-telescope/telescope-fzf-native.nvim",
         build = "make",
       },
-      "nvim-telescope/telescope-file-browser.nvim",
     },
     keys = {
       {
-        "<leader>sg",
-        function()
-          require("telescope").extensions.egrepify.egrepify()
-        end,
-        desc = "Search live grep",
-      },
-      {
-        "<leader>gs",
-        function()
-          local builtin = require("telescope.builtin")
-          builtin.git_status()
-        end,
-        desc = "git status",
-      },
-      {
-        "<Leader><Space>",
+        "<leader><space>",
         function()
           local telescope = require("telescope")
 
@@ -44,9 +30,56 @@ return {
             layout_config = { height = 40 },
           })
         end,
-        desc = "Open File Browser with the path of the current buffer",
+        desc = "Lists files in your current working directory",
       },
-      { "sb", "<Cmd>Telescope buffers<CR>", desc = "Search Buffers" },
+      {
+        "<leader>ff",
+        function()
+          local builtin = require("telescope.builtin")
+          builtin.find_files({
+            no_ignore = true,
+            hidden = true,
+          })
+        end,
+        desc = "all files",
+      },
+      {
+        "sf",
+        function()
+          local telescope = require("telescope")
+
+          local function telescope_buffer_dir()
+            return vim.fn.expand("%:p:h")
+          end
+
+          telescope.extensions.file_browser.file_browser({
+            path = "%:p:h",
+            cwd = telescope_buffer_dir(),
+            respect_gitignore = false,
+            hidden = true,
+            grouped = true,
+            previewer = false,
+            initial_mode = "normal",
+            layout_config = { height = 40 },
+          })
+        end,
+        desc = "Open File Browser with the path of the current buffer in normal mode",
+      },
+      {
+        "<leader>sg",
+        function()
+          require("telescope").extensions.egrepify.egrepify()
+        end,
+        desc = "Search live grep",
+      },
+      {
+        "sg",
+        function()
+          require("telescope").extensions.egrepify.egrepify()
+        end,
+        desc = "Search live grep",
+      },
+      { "sb", "<Cmd>Telescope buffers<CR>", desc = "Switch Buffer" },
       {
         "<leader>fP",
         function()
@@ -55,35 +88,6 @@ return {
           })
         end,
         desc = "Find Plugin File",
-      },
-      {
-        ";f",
-        function()
-          local builtin = require("telescope.builtin")
-          builtin.find_files({
-            no_ignore = false,
-            hidden = true,
-          })
-        end,
-        desc = "Lists files in your current working directory, respects .gitignore",
-      },
-      {
-        ";r",
-        function()
-          local builtin = require("telescope.builtin")
-          builtin.live_grep({
-            additional_args = { "--hidden" },
-          })
-        end,
-        desc = "Search for a string in your current working directory and get results live as you type, respects .gitignore",
-      },
-      {
-        "\\\\",
-        function()
-          local builtin = require("telescope.builtin")
-          builtin.buffers()
-        end,
-        desc = "Lists open buffers",
       },
       {
         ";t",
@@ -117,28 +121,6 @@ return {
         end,
         desc = "Lists Function names, variables, from Treesitter",
       },
-      {
-        "sf",
-        function()
-          local telescope = require("telescope")
-
-          local function telescope_buffer_dir()
-            return vim.fn.expand("%:p:h")
-          end
-
-          telescope.extensions.file_browser.file_browser({
-            path = "%:p:h",
-            cwd = telescope_buffer_dir(),
-            respect_gitignore = false,
-            hidden = true,
-            grouped = true,
-            previewer = false,
-            initial_mode = "normal",
-            layout_config = { height = 40 },
-          })
-        end,
-        desc = "Open File Browser with the path of the current buffer",
-      },
     },
     config = function(_, opts)
       local telescope = require("telescope")
@@ -151,7 +133,6 @@ return {
         layout_config = { prompt_position = "top" },
         sorting_strategy = "ascending",
         winblend = 0,
-        prompt_prefix = "  ",
         mappings = {
           n = {},
         },
@@ -168,6 +149,7 @@ return {
       opts.extensions = {
         file_browser = {
           theme = "dropdown",
+          -- theme = "ivy",
           -- disables netrw and use telescope-file-browser in its place
           hijack_netrw = true,
           mappings = {
@@ -194,28 +176,22 @@ return {
             },
           },
         },
+        egrepify = {
+          prefixes = {
+            ["!"] = {
+              flag = "invert-match",
+            },
+          },
+        },
       }
       telescope.setup(opts)
       require("telescope").load_extension("fzf")
       require("telescope").load_extension("file_browser")
-      require("telescope").load_extension("ui-select")
+      require("telescope").load_extension("live_grep_args")
     end,
   },
   {
     "fdschmidt93/telescope-egrepify.nvim",
     dependencies = { "nvim-telescope/telescope.nvim", "nvim-lua/plenary.nvim" },
-  },
-  {
-    "nvim-telescope/telescope-ui-select.nvim",
-    config = function()
-      require("telescope").setup({
-        extensions = {
-          ["ui-select"] = {
-            require("telescope.themes").get_dropdown({}),
-          },
-        },
-      })
-      require("telescope").load_extension("ui-select")
-    end,
   },
 }
