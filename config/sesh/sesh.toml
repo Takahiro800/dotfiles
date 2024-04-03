@@ -1,7 +1,0 @@
-[default_session]
-# startup_command = "nvim -c ':Telescope find_files'"
-
-[[session]]
-name = "atcoder"
-path = "~/git/Atcoder/Rust/abc"
-startup_script = "~/.config/sesh/scripts/abc"
