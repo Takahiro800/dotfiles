@@ -9,6 +9,9 @@ return {
   },
   {
     "sainnhe/gruvbox-material",
+    opts = {
+      terminal_colors = true,
+    },
   },
   {
     "xiyaowong/transparent.nvim",
