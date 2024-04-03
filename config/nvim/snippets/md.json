@@ -1,10 +1,114 @@
 {
-  "input!": {
+  "h1": {
+    "prefix": "h1",
+    "body": [
+      "# $1"
+    ]
+  },
+  "h2": {
+    "prefix": "h2",
+    "body": [
+      "## $1"
+    ]
+  },
+  "h3": {
+    "prefix": "h3",
+    "body": [
+      "### $1"
+    ]
+  },
+  "h4": {
+    "prefix": "h4",
+    "body": [
+      "#### $1"
+    ]
+  },
+  "todo": {
+    "prefix": "todo",
+    "body": [
+      "- [ ] "
+    ]
+  },
+  "checkbox": {
+    "prefix": "check",
+    "body": [
+      "- [ ] $1"
+    ]
+  },
+  "code": {
+    "prefix": "code",
+    "body": [
+      "```",
+      "$1",
+      "```"
+    ]
+  },
+  "code:bash": {
+    "prefix": "bash",
+    "body": [
+      "```bash:$1",
+      "```"
+    ]
+  },
+  "code:log": {
+    "prefix": "log",
+    "body": [
+      "```bash:$1",
+      "```"
+    ]
+  },
+  "code:c": {
+    "prefix": "c",
+    "body": [
+      "```c:$1",
+      "```"
+    ]
+  },
+  "code:ruby": {
+    "prefix": "ruby",
+    "body": [
+      "```ruby",
+      "$1",
+      "```"
+    ]
+  },
+  "code:rust": {
     "prefix": "rust",
     "body": [
-      "```rust",
+      "```rust:$1",
+      "```"
+    ]
+  },
+  "code:sql": {
+    "prefix": "code sql",
+    "body": [
+      "```sql",
       "$1",
-      "````"
+      "```"
+    ]
+  },
+  "参照記事": {
+    "prefix": "ref",
+    "body": [
+      "# 参照記事"
+    ]
+  },
+  "CHECKBOX": {
+    "prefix": "check",
+    "body": [
+      "- [ ] $1"
+    ]
+  },
+  "SUMMARY": {
+    "prefix": "summary",
+    "body": [
+      "# まとめ"
+    ]
+  },
+  "current_time": {
+    "prefix": "now",
+    "body": [
+      "# まとめ"
     ]
   }
 }
