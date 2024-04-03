@@ -3,19 +3,16 @@ return {
     "neanias/everforest-nvim",
     config = function()
       require("everforest").setup({
-        background = "soft",
+        background = "medium",
       })
     end,
   },
   {
     "sainnhe/gruvbox-material",
-    opts = {
-      terminal_colors = false,
-    },
   },
-  -- {
-  --   "xiyaowong/transparent.nvim",
-  -- },
+  {
+    "xiyaowong/transparent.nvim",
+  },
   {
     "LazyVim/LazyVim",
     opts = {
