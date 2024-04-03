@@ -7,91 +7,118 @@
         {
           "type": "basic",
           "from": {
-			  "key_code": "n",
-			  "modifiers": {
-				  "mandatory": ["control"],
-				  "optional": ["caps_lock", "option"]
-			  }
-		  },
-		  "to": [ 
-			  { "key_code": "hyphen",
-				"modifiers": ["shift"] 
-			  }
+            "key_code": "n",
+            "modifiers": {
+              "mandatory": [
+                "control"
+              ],
+              "optional": [
+                "caps_lock",
+                "option"
+              ]
+            }
+          },
+          "to": [
+            {
+              "key_code": "hyphen",
+              "modifiers": [
+                "shift"
+              ]
+            }
           ],
-		  "conditions": [
+          "conditions": [
             {
               "type": "frontmost_application_if",
-			  "file_paths": [
-				"/Applications/Google Chrome.app/Contents/MacOS/Google Chrome"
-			  ]
+              "file_paths": [
+                "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome"
+              ]
             }
           ],
           "description": "ctrl + n to _"
         },
-		{
+        {
           "type": "basic",
           "from": {
-			  "key_code": "m",
-			  "modifiers": {
-				  "mandatory": ["control"],
-				  "optional": ["caps_lock", "option"]
-			  }
-		  },
-		  "to": [ 
-			  { 
-				  "key_code": "keypad_equal_sign"
-			  }
+            "key_code": "m",
+            "modifiers": {
+              "mandatory": [
+                "control"
+              ],
+              "optional": [
+                "caps_lock",
+                "option"
+              ]
+            }
+          },
+          "to": [
+            {
+              "key_code": "keypad_equal_sign"
+            }
           ],
-		  "conditions": [
+          "conditions": [
             {
               "type": "frontmost_application_if",
-			  "file_paths": [
-				"/Applications/Google Chrome.app/Contents/MacOS/Google Chrome"
-			  ]
+              "file_paths": [
+                "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome"
+              ]
             }
           ],
           "description": "ctrl + n to _"
-        }, 
-		{
+        },
+        {
           "type": "basic",
           "from": {
-			  "key_code": "i",
-			  "modifiers": {
-				  "mandatory": ["control"],
-				  "optional": ["caps_lock", "option"]
-			  }
-		  },
-		  "to": [ 
-			  { "key_code": "keypad_hyphen"}
+            "key_code": "i",
+            "modifiers": {
+              "mandatory": [
+                "control"
+              ],
+              "optional": [
+                "caps_lock",
+                "option"
+              ]
+            }
+          },
+          "to": [
+            {
+              "key_code": "keypad_hyphen"
+            }
           ],
-		  "conditions": [
+          "conditions": [
             {
               "type": "frontmost_application_if",
-			  "file_paths": [
-				"/Applications/Google Chrome.app/Contents/MacOS/Google Chrome"
-			  ]
+              "file_paths": [
+                "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome"
+              ]
             }
           ],
           "description": "ctrl + n to _"
-		},
-				{
+        },
+        {
           "type": "basic",
           "from": {
-			  "key_code": "o",
-			  "modifiers": {
-				  "mandatory": ["control"],
-				  "optional": ["caps_lock", "option"]
-			  }
-		  },
-		  "to": [ 
-			  { "key_code": "keypad_plus"}
+            "key_code": "o",
+            "modifiers": {
+              "mandatory": [
+                "control"
+              ],
+              "optional": [
+                "caps_lock",
+                "option"
+              ]
+            }
+          },
+          "to": [
+            {
+              "key_code": "keypad_plus"
+            }
           ],
-		  "conditions": [
+          "conditions": [
             {
               "type": "frontmost_application_if",
-			  "file_paths": [
-				"/Applications/Google Chrome.app/Contents/MacOS/Google Chrome"
-			  ]
+              "file_paths": [
+                "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome"
+              ]
             }
           ],
           "description": "ctrl + n to _"
