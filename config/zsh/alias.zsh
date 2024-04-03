@@ -8,6 +8,12 @@ alias g="git"
 ## gitフォルダへの移動
 alias cg="cd ~/git"
 
+# lsd
+alias ls='lsd'
+alias ll='ls -l'
+alias lla='ls -la'
+alias lt='ls --tree'
+
 ## docker周りのエイリアス
 alias dcb='docker compose build'
 alias dcu='docker compose up -d'
