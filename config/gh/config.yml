@@ -9,11 +9,14 @@ pager:
 # Aliases allow you to create nicknames for gh commands
 aliases:
     co: pr checkout
-    open: repo view -w
     is: issue
     isc: issue create
     isl: issue list
+    ise: issue edit
+    isvw: issue view -w
+    open: repo view -w
     mypr: pr list -A Takahiro800
+    mypra: pr list -s all -A Takahiro800
     pv: pr view -w
 # The path to a unix socket through which send HTTP connections. If blank, HTTP traffic will be handled by net/http.DefaultTransport.
 http_unix_socket:
