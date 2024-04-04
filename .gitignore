@@ -12,3 +12,4 @@ config/zsh/.zprofile
 config/zsh/ignore.zsh
 config/sesh/**
 trash/**
+config/nvim/**.db.json
