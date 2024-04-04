@@ -48,6 +48,13 @@ return {
       },
       { "sb", "<Cmd>Telescope buffers<CR>", desc = "Search Buffers" },
       {
+        "<leader>gs",
+        function()
+          require("telescope.builtin").git_status()
+        end,
+        desc = "Search Git Diff",
+      },
+      {
         "<leader>fP",
         function()
           require("telescope.builtin").find_files({
