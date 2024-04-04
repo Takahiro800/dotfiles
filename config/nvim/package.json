@@ -13,6 +13,18 @@
           "markdown"
         ],
         "path": "snippets/md.json"
+      },
+      {
+        "language": [
+          "ruby"
+        ],
+        "path": "snippets/ruby.json"
+      },
+      {
+        "language": [
+          "eruby"
+        ],
+        "path": "snippets/erb.json"
       }
     ]
   }

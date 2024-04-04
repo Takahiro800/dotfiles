@@ -44,7 +44,7 @@ defaults:
         width: 10
       assignees:
         width: 20
-        hidden: true
+        hidden: false
   refetchIntervalMinutes: 30
 keybindings:
   issues: []

@@ -1,4 +1,3 @@
-
 ## 補完で小文字でも大文字にマッチさせる
 zstyle ':completion:*' matcher-list 'm:{a-z}={A-Z}'
 
@@ -17,7 +16,6 @@ function peco-history-selection() {
 }
 zle -N peco-history-selection
 bindkey '^R' peco-history-selection
-
 
 ## ctrl + [ でGitディレクトリを検索・移動
 function peco-src () {

@@ -12,3 +12,6 @@ vim.g.copilot_filetypes = {
   csv = false,
   sql = false,
 }
+local opt = vim.opt
+opt.swapfile = false
+opt.expandtab = true
