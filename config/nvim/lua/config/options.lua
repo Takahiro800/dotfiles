@@ -6,6 +6,7 @@ vim.opt.autoindent = true
 vim.opt.smartindent = true
 vim.opt.relativenumber = false
 vim.opt.expandtab = true
+vim.opt.swapfile = false
 
 vim.g.copilot_filetypes = {
   markdown = false,
@@ -13,6 +14,3 @@ vim.g.copilot_filetypes = {
   sql = false,
   rust = false,
 }
-local opt = vim.opt
-opt.swapfile = false
-opt.expandtab = true
