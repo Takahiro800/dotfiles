@@ -16,7 +16,7 @@ alias lt='ls --tree'
 
 ## docker周りのエイリアス
 alias dcb='docker compose build'
-alias dcu='docker compose up -d'
+alias dcu='docker compose up'
 alias dcr='docker compose run'
 alias dcrr='docker compose run --rm'
 alias dcre='docker compose restart'
@@ -25,6 +25,7 @@ alias dcd='docker compose down'
 alias dp='docker ps'
 alias dcl='docker compose logs'
 alias dcc='docker compose config --services'
+alias dx ='docker compose exec'
 
 ## localhost立ち上げのため
 alias lhost='(){open http://localhost:$1}'
