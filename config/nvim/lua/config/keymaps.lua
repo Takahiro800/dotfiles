@@ -46,7 +46,7 @@ keymap.set("n", "noh", ":noh", opts)
 -- 検索
 keymap.set("n", "/", ":/", opts)
 
-keymap.set("i", "<Right>", 'copilot#Accept("\\<CR>")', {
+keymap.set("i", "<C-t>", 'copilot#Accept("\\<CR>")', {
   expr = true,
   replace_keycodes = false,
 })
