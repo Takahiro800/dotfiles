@@ -5,7 +5,6 @@ zstyle ':completion:*' matcher-list 'm:{a-z}={A-Z}'
 zstyle ':completion:*:default' menu select=1
 
 ## 補完一覧をカラー表示
-autoload colors
 zstyle ':completion:*' list-colors ''
 
 ## コマンド履歴検索
