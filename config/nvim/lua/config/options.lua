@@ -11,6 +11,7 @@ vim.g.copilot_filetypes = {
   markdown = false,
   csv = false,
   sql = false,
+  rust = false,
 }
 local opt = vim.opt
 opt.swapfile = false
