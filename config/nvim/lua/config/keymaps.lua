@@ -38,6 +38,26 @@ keymap.set("n", "noh", ":noh<CR>", opts)
 keymap.set("n", "f", ":HopWord<cr>", opts)
 keymap.set("n", "s", ":HopWord<cr>", opts)
 
+-- 行頭・行末
+keymap.set("n", "<Left>", "0")
+keymap.set("n", "<Right>", "$")
+
+-- 折り返し
+keymap.set("n", "j", "gj", opts)
+keymap.set("n", "k", "gk", opts)
+
+-- nohilight
+keymap.set("n", "noh", ":noh", opts)
+
+-- 検索
+keymap.set("n", "/", ":/", opts)
+
+keymap.set("i", "<Right>", 'copilot#Accept("\\<CR>")', {
+  expr = true,
+  replace_keycodes = false,
+})
+vim.g.copilot_no_tab_map = true
+
 -- nvim-cmp
 return {
   "hrsh7th/nvim-cmp",
