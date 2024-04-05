@@ -25,7 +25,7 @@ alias dcd='docker compose down'
 alias dp='docker ps'
 alias dcl='docker compose logs'
 alias dcc='docker compose config --services'
-alias dx ='docker compose exec'
+alias dx='docker compose exec'
 
 ## localhost立ち上げのため
 alias lhost='(){open http://localhost:$1}'
