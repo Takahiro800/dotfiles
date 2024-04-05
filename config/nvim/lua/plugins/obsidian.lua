@@ -8,7 +8,8 @@ return {
     workspaces = {
       {
         name = "personal",
-        path = "~/git/Obsidian-Vault",
+        path = "~/git/note",
+        strict = true,
       },
     },
     daily_notes = {
@@ -20,6 +21,9 @@ return {
     completion = {
       nvim_cmp = true,
       min_chars = 2,
+    },
+    ui = {
+      enable = false,
     },
   },
 }
