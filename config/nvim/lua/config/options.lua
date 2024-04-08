@@ -7,10 +7,11 @@ vim.opt.smartindent = true
 vim.opt.relativenumber = false
 vim.opt.expandtab = true
 vim.opt.swapfile = false
+vim.tabstop = 2
+-- vim.opt.conceallevel = 1
 
 vim.g.copilot_filetypes = {
   markdown = false,
   csv = false,
   sql = false,
-  rust = false,
 }
