@@ -46,11 +46,6 @@ keymap.set("n", "noh", ":noh", opts)
 -- 検索
 keymap.set("n", "/", ":/", opts)
 
-keymap.set("i", "<C-t>", 'copilot#Accept("\\<CR>")', {
-  expr = true,
-  replace_keycodes = false,
-})
-vim.g.copilot_no_tab_map = true
 -- nvim-cmp
 return {
   "hrsh7th/nvim-cmp",
