@@ -8,22 +8,22 @@ return {
     workspaces = {
       {
         name = "personal",
-        path = "~/git/note",
+        path = "~/git/notes",
         strict = true,
       },
     },
     daily_notes = {
       folder = "02_Daily",
       date_format = "%Y-%m-%d",
-      alias_format = "%B %-d, %Y",
-      template = nil,
+      alias_format = "%Y-%m-%d",
+      template = "daily_template",
     },
     completion = {
       nvim_cmp = true,
       min_chars = 2,
     },
     ui = {
-      enable = false,
+      enable = true,
     },
 
     notes_subdir = "00_Inbox",
@@ -49,5 +49,6 @@ return {
   },
   keys = {
     { "<leader>zn", "<cmd>ObsidianNew<cr>", desc = "Obsidian new note" },
+    { "<leader>zt", "<cmd>ObsidianToday<cr>", desc = "Obsidian Today daily note" },
   },
 }
