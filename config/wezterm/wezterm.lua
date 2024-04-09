@@ -36,6 +36,8 @@ local config = {
 		{ key = "l", mods = "CMD", action = act.ActivateTabRelative(1) },
 		{ key = "c", mods = "LEADER", action = act.ActivateCopyMode },
 		{ key = "s", mods = "LEADER", action = act.QuickSelect },
+		{ key = "h", mods = "LEADER", action = act.MoveTabRelative(-1) },
+		{ key = "l", mods = "LEADER", action = act.MoveTabRelative(1) },
 
 		-- tmux
 		{ key = "m", mods = "CTRL", action = act.SendKey({ key = "=" }) },
