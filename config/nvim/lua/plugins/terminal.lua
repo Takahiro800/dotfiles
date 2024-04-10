@@ -34,6 +34,20 @@ return {
         end,
         desc = "Lazygit for not using tmux",
       },
+      {
+        "<M-d>",
+        function()
+          local Terminal = require("toggleterm.terminal").Terminal
+          local gh_dash = Terminal:new({
+            cmd = "gh dash",
+            direction = "float",
+            hidden = true,
+          })
+
+          gh_dash:toggle()
+        end,
+        desc = "gh dash for not using tmux",
+      },
     },
     opts = {
       open_mapping = [[<C-/>]],
