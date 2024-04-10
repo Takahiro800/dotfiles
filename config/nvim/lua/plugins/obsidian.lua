@@ -22,9 +22,6 @@ return {
       nvim_cmp = true,
       min_chars = 2,
     },
-    ui = {
-      enable = true,
-    },
 
     notes_subdir = "00_Inbox",
     new_notes_location = "notes_subdir",
