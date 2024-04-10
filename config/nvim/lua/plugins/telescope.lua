@@ -55,6 +55,7 @@ return {
 
           telescope.extensions.file_browser.file_browser({
             path = "%:p:h",
+            prompt_title = telescope_buffer_dir(),
             cwd = telescope_buffer_dir(),
             respect_gitignore = false,
             hidden = true,
