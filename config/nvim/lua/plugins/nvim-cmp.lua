@@ -1,6 +1,7 @@
 return {
   { "hrsh7th/cmp-cmdline" },
   { "hrsh7th/cmp-buffer" },
+  { "saadparwaiz1/cmp_luasnip" },
   {
     "hrsh7th/nvim-cmp",
     dependencies = {
@@ -53,10 +54,11 @@ return {
         }),
         sources = cmp.config.sources({
           { name = "copilot" },
-          { name = "buffer" },
           { name = "nvim_lsp" },
           { name = "luasnip" },
           { name = "path" },
+        }, {
+          { name = "buffer" },
         }),
         formatting = {
           format = function(_, item)
@@ -76,7 +78,13 @@ return {
 
         -- `/` cmdline setup.
         cmp.setup.cmdline({ "/", "?" }, {
-          mapping = cmp.mapping.preset.cmdline(),
+          mapping = cmp.mapping.preset.cmdline({
+            -- ["<CR>"] = cmp.mapping(cmp.mapping.confirm({ select = true }), { "i", "c" }),
+            ["<Up>"] = cmp.mapping(cmp.mapping.select_prev_item(), { "i", "c" }),
+            ["<Down>"] = cmp.mapping(cmp.mapping.select_next_item(), { "i", "c" }),
+            ["<C-k>"] = cmp.mapping(cmp.mapping.select_prev_item(), { "i", "c" }),
+            ["<C-j>"] = cmp.mapping(cmp.mapping.select_next_item(), { "i", "c" }),
+          }),
           sources = {
             { name = "buffer" },
           },
