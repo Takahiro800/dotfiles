@@ -4,6 +4,7 @@ return {
     dependencies = {
       "nvim-telescope/telescope-live-grep-args.nvim",
       "nvim-telescope/telescope-file-browser.nvim",
+      "crispgm/telescope-heading.nvim",
       {
         "nvim-telescope/telescope-fzf-native.nvim",
         build = "make",
@@ -79,7 +80,13 @@ return {
         end,
         desc = "Search live grep",
       },
-      { "sb", "<Cmd>Telescope buffers<CR>", desc = "Switch Buffer" },
+      {
+        "sb",
+        function()
+          require("telescope.builtin").buffers({})
+        end,
+        desc = "Switch Buffer",
+      },
       {
         "<leader>gs",
         function()
@@ -150,6 +157,20 @@ return {
           initial_mode = "normal",
           layout_config = {
             preview_cutoff = 9999,
+          },
+        },
+        buffers = {
+          show_all_buffers = true,
+          sort_lastused = true,
+          theme = "dropdown",
+          previewer = false,
+          mappings = {
+            ["i"] = {
+              ["<C-d>"] = "delete_buffer",
+            },
+            ["n"] = {
+              ["<C-d>"] = "delete_buffer",
+            },
           },
         },
       }
