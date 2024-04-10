@@ -43,9 +43,6 @@ keymap.set("n", "k", "gk", opts)
 -- nohilight
 keymap.set("n", "noh", ":noh", opts)
 
--- 検索
-keymap.set("n", "/", ":/", opts)
-
 -- nvim-cmp
 return {
   "hrsh7th/nvim-cmp",
