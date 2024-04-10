@@ -1,4 +1,6 @@
 return {
+  { "hrsh7th/cmp-cmdline" },
+  { "hrsh7th/cmp-buffer" },
   {
     "hrsh7th/nvim-cmp",
     dependencies = {
@@ -72,6 +74,35 @@ return {
           },
         },
         sorting = defaults.sorting,
+
+        -- `/` cmdline setup.
+        cmp.setup.cmdline({ "/", "?" }, {
+          mapping = cmp.mapping.preset.cmdline(),
+          sources = {
+            { name = "buffer" },
+          },
+        }),
+
+        -- `:` cmdline setup.
+        cmp.setup.cmdline(":", {
+          mapping = cmp.mapping.preset.cmdline({
+            -- ["<CR>"] = cmp.mapping(cmp.mapping.confirm({ select = true }), { "i", "c" }),
+            ["<Up>"] = cmp.mapping(cmp.mapping.select_prev_item(), { "i", "c" }),
+            ["<Down>"] = cmp.mapping(cmp.mapping.select_next_item(), { "i", "c" }),
+            ["<C-k>"] = cmp.mapping(cmp.mapping.select_prev_item(), { "i", "c" }),
+            ["<C-j>"] = cmp.mapping(cmp.mapping.select_next_item(), { "i", "c" }),
+          }),
+          sources = cmp.config.sources({
+            { name = "path" },
+          }, {
+            {
+              name = "cmdline",
+              option = {
+                ignore_cmds = { "Man", "!" },
+              },
+            },
+          }),
+        }),
       }
     end,
   },
