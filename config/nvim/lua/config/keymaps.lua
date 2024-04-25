@@ -28,6 +28,20 @@ keymap.set("n", "<leader>go", "<Cmd>GitBlameOpenCommitURL<cr>", opts)
 keymap.set("n", "<leader>gc", "<Cmd>GitBlameCopySHA<cr>", opts)
 keymap.set("n", "<leader>gp", "<Cmd>GitBlameCopyCommitURL<cr>", opts)
 
+-- git lenker
+keymap.set(
+  "n",
+  "<leader>gy",
+  '<cmd>lua require"gitlinker".get_buf_range_url("n", {action_callback = require"gitlinker.actions".open_in_browser})<cr>',
+  { silent = true }
+)
+keymap.set(
+  "v",
+  "<leader>gy",
+  '<cmd>lua require"gitlinker".get_buf_range_url("v", {action_callback = require"gitlinker.actions".open_in_browser})<cr>',
+  { silent = true }
+)
+
 -- hop
 keymap.set("n", "f", ":HopWord<cr>", opts)
 keymap.set("n", "s", ":HopWord<cr>", opts)

@@ -11,10 +11,6 @@ return {
     -- Github上の共有リンク用
     "ruifm/gitlinker.nvim",
     dependencies = "nvim-lua/plenary.nvim",
-    opts = {},
-    keys = {
-      { "<leader>gy", '<cmd>lua require"gitlinker".get_repo_url()<cr>' },
-    },
   },
   {
     "pwntester/octo.nvim",
