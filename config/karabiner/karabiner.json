@@ -18,6 +18,130 @@
                 },
                 "rules": [
                     {
+                        "description": "Arcで記号を入力しやすく",
+                        "manipulators": [
+                            {
+                                "conditions": [
+                                    {
+                                        "file_paths": [
+                                            "Applications/Arc.app/Contents/MacOS/Arc"
+                                        ],
+                                        "type": "frontmost_application_if"
+                                    }
+                                ],
+                                "description": "ctrl + n to _",
+                                "from": {
+                                    "key_code": "n",
+                                    "modifiers": {
+                                        "mandatory": [
+                                            "control"
+                                        ],
+                                        "optional": [
+                                            "caps_lock",
+                                            "option"
+                                        ]
+                                    }
+                                },
+                                "to": [
+                                    {
+                                        "key_code": "hyphen",
+                                        "modifiers": [
+                                            "shift"
+                                        ]
+                                    }
+                                ],
+                                "type": "basic"
+                            },
+                            {
+                                "conditions": [
+                                    {
+                                        "file_paths": [
+                                            "Applications/Arc.app/Contents/MacOS/Arc"
+                                        ],
+                                        "type": "frontmost_application_if"
+                                    }
+                                ],
+                                "description": "ctrl + n to _",
+                                "from": {
+                                    "key_code": "m",
+                                    "modifiers": {
+                                        "mandatory": [
+                                            "control"
+                                        ],
+                                        "optional": [
+                                            "caps_lock",
+                                            "option"
+                                        ]
+                                    }
+                                },
+                                "to": [
+                                    {
+                                        "key_code": "keypad_equal_sign"
+                                    }
+                                ],
+                                "type": "basic"
+                            },
+                            {
+                                "conditions": [
+                                    {
+                                        "file_paths": [
+                                            "Applications/Arc.app/Contents/MacOS/Arc"
+                                        ],
+                                        "type": "frontmost_application_if"
+                                    }
+                                ],
+                                "description": "ctrl + n to _",
+                                "from": {
+                                    "key_code": "i",
+                                    "modifiers": {
+                                        "mandatory": [
+                                            "control"
+                                        ],
+                                        "optional": [
+                                            "caps_lock",
+                                            "option"
+                                        ]
+                                    }
+                                },
+                                "to": [
+                                    {
+                                        "key_code": "keypad_hyphen"
+                                    }
+                                ],
+                                "type": "basic"
+                            },
+                            {
+                                "conditions": [
+                                    {
+                                        "file_paths": [
+                                            "Applications/Arc.app/Contents/MacOS/Arc"
+                                        ],
+                                        "type": "frontmost_application_if"
+                                    }
+                                ],
+                                "description": "ctrl + n to _",
+                                "from": {
+                                    "key_code": "o",
+                                    "modifiers": {
+                                        "mandatory": [
+                                            "control"
+                                        ],
+                                        "optional": [
+                                            "caps_lock",
+                                            "option"
+                                        ]
+                                    }
+                                },
+                                "to": [
+                                    {
+                                        "key_code": "keypad_plus"
+                                    }
+                                ],
+                                "type": "basic"
+                            }
+                        ]
+                    },
+                    {
                         "description": "Ctrl + h = left_arrow",
                         "manipulators": [
                             {
@@ -420,7 +544,9 @@
                 {
                     "disable_built_in_keyboard_if_exists": false,
                     "fn_function_keys": [],
+                    "game_pad_swap_sticks": false,
                     "identifiers": {
+                        "is_game_pad": false,
                         "is_keyboard": true,
                         "is_pointing_device": false,
                         "product_id": 834,
@@ -428,13 +554,21 @@
                     },
                     "ignore": false,
                     "manipulate_caps_lock_led": true,
+                    "mouse_flip_horizontal_wheel": false,
+                    "mouse_flip_vertical_wheel": false,
+                    "mouse_flip_x": false,
+                    "mouse_flip_y": false,
+                    "mouse_swap_wheels": false,
+                    "mouse_swap_xy": false,
                     "simple_modifications": [],
                     "treat_as_built_in_keyboard": false
                 },
                 {
                     "disable_built_in_keyboard_if_exists": false,
                     "fn_function_keys": [],
+                    "game_pad_swap_sticks": false,
                     "identifiers": {
+                        "is_game_pad": false,
                         "is_keyboard": false,
                         "is_pointing_device": true,
                         "product_id": 834,
@@ -442,13 +576,21 @@
                     },
                     "ignore": true,
                     "manipulate_caps_lock_led": false,
+                    "mouse_flip_horizontal_wheel": false,
+                    "mouse_flip_vertical_wheel": false,
+                    "mouse_flip_x": false,
+                    "mouse_flip_y": false,
+                    "mouse_swap_wheels": false,
+                    "mouse_swap_xy": false,
                     "simple_modifications": [],
                     "treat_as_built_in_keyboard": false
                 },
                 {
                     "disable_built_in_keyboard_if_exists": false,
                     "fn_function_keys": [],
+                    "game_pad_swap_sticks": false,
                     "identifiers": {
+                        "is_game_pad": false,
                         "is_keyboard": true,
                         "is_pointing_device": false,
                         "product_id": 33,
@@ -456,13 +598,21 @@
                     },
                     "ignore": false,
                     "manipulate_caps_lock_led": true,
+                    "mouse_flip_horizontal_wheel": false,
+                    "mouse_flip_vertical_wheel": false,
+                    "mouse_flip_x": false,
+                    "mouse_flip_y": false,
+                    "mouse_swap_wheels": false,
+                    "mouse_swap_xy": false,
                     "simple_modifications": [],
                     "treat_as_built_in_keyboard": false
                 },
                 {
                     "disable_built_in_keyboard_if_exists": false,
                     "fn_function_keys": [],
+                    "game_pad_swap_sticks": false,
                     "identifiers": {
+                        "is_game_pad": false,
                         "is_keyboard": true,
                         "is_pointing_device": false,
                         "product_id": 50475,
@@ -470,13 +620,21 @@
                     },
                     "ignore": false,
                     "manipulate_caps_lock_led": true,
+                    "mouse_flip_horizontal_wheel": false,
+                    "mouse_flip_vertical_wheel": false,
+                    "mouse_flip_x": false,
+                    "mouse_flip_y": false,
+                    "mouse_swap_wheels": false,
+                    "mouse_swap_xy": false,
                     "simple_modifications": [],
                     "treat_as_built_in_keyboard": false
                 },
                 {
                     "disable_built_in_keyboard_if_exists": false,
                     "fn_function_keys": [],
+                    "game_pad_swap_sticks": false,
                     "identifiers": {
+                        "is_game_pad": false,
                         "is_keyboard": false,
                         "is_pointing_device": true,
                         "product_id": 50475,
@@ -484,6 +642,12 @@
                     },
                     "ignore": true,
                     "manipulate_caps_lock_led": false,
+                    "mouse_flip_horizontal_wheel": false,
+                    "mouse_flip_vertical_wheel": false,
+                    "mouse_flip_x": false,
+                    "mouse_flip_y": false,
+                    "mouse_swap_wheels": false,
+                    "mouse_swap_xy": false,
                     "simple_modifications": [],
                     "treat_as_built_in_keyboard": false
                 }
