@@ -84,7 +84,9 @@ return {
       {
         "sb",
         function()
-          require("telescope.builtin").buffers({})
+          require("telescope.builtin").buffers({
+            layout_config = { height = 30 },
+          })
         end,
         desc = "Switch Buffer",
       },
@@ -163,6 +165,7 @@ return {
         buffers = {
           show_all_buffers = true,
           sort_lastused = true,
+          ignore_current_buffer = true,
           theme = "dropdown",
           previewer = false,
           mappings = {
