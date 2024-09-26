@@ -7,8 +7,8 @@ import = [
 [font]
 normal = { family = "Moralerspace Argon HWNF", style = "Italic" }
 bold = { family = "Moralerspace Argon HWNF", style = "Bold Italic" }
-italic = { family = "Hack Nerd Font", style = "Italic" }
-bold_italic = { family = "Hack Nerd Font", style = "Bold Italic" }
+italic = { family = "Moralerspace Argon HWNF", style = "Italic" }
+bold_italic = { family = "Moralerspace Argon HWNF", style = "Bold Italic" }
 size = 14.0
 offset = { x = 2, y = 2 }
 
