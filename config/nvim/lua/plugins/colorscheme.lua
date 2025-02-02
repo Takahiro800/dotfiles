@@ -7,11 +7,19 @@ return {
       })
     end,
   },
+  -- {
+  --   "sainnhe/gruvbox-material",
+  --   opts = {
+  --     terminal_colors = true,
+  --   },
+  -- },
   {
-    "sainnhe/gruvbox-material",
-    opts = {
-      terminal_colors = true,
-    },
+    "catppuccin/nvim",
+    name = "catppuccin",
+    priority = 1000,
+  },
+  {
+    "rebelot/kanagawa.nvim",
   },
   {
     "xiyaowong/transparent.nvim",
@@ -19,7 +27,9 @@ return {
   {
     "LazyVim/LazyVim",
     opts = {
-      colorscheme = "gruvbox-material",
+      colorscheme = "kanagawa",
+      -- colorscheme = "catppuccin",
+      -- colorscheme = "gruvbox-material",
     },
   },
 }
