@@ -11,8 +11,9 @@ local config = {
 		bold = false,
 		italic = true,
 	}),
-	use_ime = true,
+
 	font_size = 16.0,
+	use_ime = true,
 	-- color_scheme = "Everforest Dark (Gogh)",
   color_scheme = "Kanagawa (Gogh)",
 
@@ -25,7 +26,7 @@ local config = {
 	-- 	hue = 0.9,
 	-- 	saturation = 0.9,
 	-- },
-	window_decorations = "RESIZE",
+	-- window_decorations = "RESIZE",
 
 	-- alt-keyを有効にする
 	send_composed_key_when_left_alt_is_pressed = false,
@@ -41,6 +42,7 @@ local config = {
 		{ key = "s", mods = "LEADER", action = act.QuickSelect },
 		{ key = "h", mods = "LEADER", action = act.MoveTabRelative(-1) },
 		{ key = "l", mods = "LEADER", action = act.MoveTabRelative(1) },
+		{ key = "v", mods = "CTRL", action = act.ActivateCopyMode },
 
 		-- tmux
 		{ key = "m", mods = "CTRL", action = act.SendKey({ key = "=" }) },
