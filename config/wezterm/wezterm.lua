@@ -5,9 +5,11 @@ local act = wezterm.action
 
 local config = {
 	hide_tab_bar_if_only_one_tab = true,
-	font = wezterm.font_with_fallback({
-		{ family = "Cica", weight = "Bold", stretch = "Normal", style = "Italic" },
-		{ family = "Cica", assume_emoji_presentation = true },
+	font = wezterm.font("CommitMono", {
+		stretch = "Normal",
+		weight = "Regular",
+		bold = false,
+		italic = true,
 	}),
 	use_ime = true,
 	font_size = 16.0,
