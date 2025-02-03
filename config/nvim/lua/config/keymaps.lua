@@ -6,6 +6,8 @@ local keymap = vim.keymap
 local opts = { noremap = true, silent = true }
 
 keymap.set("i", "jk", "<Esc>")
+keymap.set("t", "<C-[>", "<C-\\><C-n>")
+keymap.set("t", "<ESC>", "<C-\\><C-n>")
 
 -- Split window
 keymap.set("n", "ss", ":split<Return>", opts)
@@ -56,6 +58,12 @@ keymap.set("n", "k", "gk", opts)
 
 -- nohilight
 keymap.set("n", "noh", ":noh", opts)
+
+-- window resize
+keymap.set("n", "<leader>hi", ":resize +5<CR>", opts)
+keymap.set("n", "<leader>hd", ":resize -5<CR>", opts)
+keymap.set("n", "<leader>vi", ":vertical resize +20<CR>", opts)
+keymap.set("n", "<leader>vd", ":vertical resize -20<CR>", opts)
 
 -- nvim-cmp
 return {
