@@ -53,9 +53,6 @@ alias ocaml='rlwrap ocaml'
 
 # cargo-atcoder
 alias ca='cargo atcoder'
-alias can='cargo atcoder new'
-alias cat='cargo atcoder test'
-alias cas='cargo atcoder submit'
 
 # swapファイル
 alias cswap='cd ~/.local/state/nvim/swap'
