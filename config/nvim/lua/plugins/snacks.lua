@@ -36,6 +36,21 @@ return {
       },
     },
     keys = {
+      {
+        "<leader>sg",
+        function()
+          vim.ui.input({ prompt = "Enter directory (default: cwd): " }, function(dir)
+            dir = (dir and dir ~= "") and dir or nil
+            Snacks.picker.grep({
+              prompt = ("[%s]: "):format(dir or "cwd"),
+              -- prompt = "Enter grep word (target: dir): ",
+              dirs = (dir and dir ~= "") and { dir } or nil,
+              live = true, -- リアルタイム検索
+            })
+          end)
+        end,
+        desc = "Grep with directory selection",
+      },
       -- my custom
       {
         "sb",
@@ -74,6 +89,13 @@ return {
         end,
         desc = "Recent",
       },
+      {
+        "gb",
+        function()
+          Snacks.picker.grep_buffers()
+        end,
+        desc = "Grep Open Buffers",
+      },
       -- git
       {
         "<leader>gc",
@@ -104,13 +126,13 @@ return {
         end,
         desc = "Grep Open Buffers",
       },
-      {
-        "<leader>sg",
-        function()
-          Snacks.picker.grep()
-        end,
-        desc = "Grep",
-      },
+      -- {
+      --   "<leader>sg",
+      --   function()
+      --     Snacks.picker.grep()
+      --   end,
+      --   desc = "Grep",
+      -- },
       {
         "<leader>sw",
         function()
