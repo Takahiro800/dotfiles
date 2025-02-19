@@ -144,7 +144,8 @@ return {
       local actions = require("telescope.actions")
       local fb_actions = require("telescope").extensions.file_browser.actions
 
-      opts.defaults = vim.tbl_deep_extend("force", opts.defaults, {
+      local opts = opts or {}
+      opts.defaults = vim.tbl_deep_extend("force", opts.defaults or {}, {
         -- wrap_results = true,
         layout_strategy = "horizontal",
         layout_config = { prompt_position = "top" },
@@ -181,8 +182,6 @@ return {
       opts.extensions = {
         file_browser = {
           theme = "dropdown",
-          -- theme = "ivy",
-          -- disables netrw and use telescope-file-browser in its place
           hijack_netrw = true,
           mappings = {
             -- your custom insert mode mappings
