@@ -14,3 +14,4 @@ config/sesh/**
 trash/**
 config/nvim/**.db.json
 config/nvim/lazy-lock.json
+config/nvim/copilot/**
