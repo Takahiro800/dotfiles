@@ -13,3 +13,9 @@ customCommands:
     subprocess: true
 os:
   editPreset: 'nvim'
+# git:
+#     commitPrefixes:
+#       my_project: # This is repository folder name
+#         pattern: "^\\w+\\/(\\w+-\\w+)"
+#         replace: "[$1] "
+
