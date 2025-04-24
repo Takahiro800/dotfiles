@@ -60,9 +60,12 @@ return {
             respect_gitignore = false,
             hidden = true,
             grouped = true,
-            previewer = false,
+            previewer = true,
             initial_mode = "normal",
-            layout_config = { height = 40 },
+            layout_config = {
+              height = 40,
+              width = 0.8,
+            },
           })
         end,
         desc = "Open File Browser with the path of the current buffer in normal mode",
@@ -183,6 +186,7 @@ return {
         file_browser = {
           theme = "dropdown",
           hijack_netrw = true,
+          layout_strategy = "horizontal",
           mappings = {
             -- your custom insert mode mappings
             ["n"] = {
