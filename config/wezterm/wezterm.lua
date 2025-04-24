@@ -12,10 +12,10 @@ local config = {
 		italic = true,
 	}),
 
-	font_size = 16.0,
+	font_size = 18.0,
 	use_ime = true,
 	-- color_scheme = "Everforest Dark (Gogh)",
-  color_scheme = "Kanagawa (Gogh)",
+	color_scheme = "Kanagawa (Gogh)",
 
 	-- adjust_window_size_when_changing_font_size = false,
 
