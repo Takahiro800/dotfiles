@@ -15,6 +15,7 @@ return {
         markdown = false,
         csv = false,
         sql = false,
+        scala = false,
       },
     },
   },
