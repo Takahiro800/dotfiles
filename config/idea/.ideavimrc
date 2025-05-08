@@ -1,0 +1,36 @@
+let mapleader = " "
+
+inoremap jk <ESC>
+nnoremap <Leader>ev :<C-u>vsplit ~/.ideavimrc<CR>
+nnoremap <Leader>sv :<C-u>source ~/.ideavimrc<CR>
+
+set clipboard+=unnamed
+
+" Ke mapping
+nmap gi <Action>(GotoImplementation)
+nmap gr <Action>(FindUsages)
+nmap <leader>fa <Action>(GotoAction)
+nmap <leader>ff <Action>(SearchEverywhere)
+nmap <leader>fw <Action>(FindInPath)
+nmap <leader>c <Action>(CloseContent)
+nmap <leader>bc <Action>(CloseAllEditorsButActive)
+nmap <leader>bC <Action>(CloseAllEditors)
+nmap <leader>e <Action>(ActivateProjectToolWindow)
+nmap <leader>la <Action>(ShowIntentionActions)
+nmap <leader>ls <Action>(ActivateStructureToolWindow)
+nmap <leader>lr <Action>(RenameElement)
+nmap <leader>o <Action>(EditorEscape)
+nmap <leader>th <Action>(ActivateTerminalToolWindow)
+nmap <leader>q <Action>(HideAllWindows)
+nmap <leader>/ <Action>(CommentByLineComment)
+
+nmap u <Action>($Undo)
+nmap sl <Action>(NextSplitter)
+nmap sh <Action>(PrevSplitter)
+nmap H <Action>(PreviousTab)
+nmap L <Action>(NextTab)
+
+map <Leader>pf <action>(com.mituuz.fuzzier.Fuzzier)
+map <Leader>mf <action>(com.mituuz.fuzzier.FuzzyMover)
+map <Leader>gf <action>(com.mituuz.fuzzier.FuzzierVCS)
+map <Leader>ff <action>(com.mituuz.fuzzier.FuzzyGrep)
